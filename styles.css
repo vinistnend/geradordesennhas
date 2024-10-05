@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 10px; /* Adicionado para evitar overflow em telas menores */
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%; /* Largura 100% para responsividade */
+    max-width: 400px; /* Largura máxima para não esticar demais */
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Permite que as opções se movam para a linha seguinte */
+}
+
+.options label {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    flex-basis: 48%; /* Ajustado para caber em uma linha com margens */
+}
+
+.length {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.length label {
+    margin-right: 10px;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px; /* Tamanho menor em telas pequenas */
+    }
+
+    .options label {
+        flex-basis: 100%; /* Cada opção ocupa a linha inteira */
+        justify-content: center; /* Centraliza as opções */
+    }
+
+    input[type="text"], button {
+        font-size: 14px; /* Tamanho de fonte menor em telas pequenas */
+    }
+}
